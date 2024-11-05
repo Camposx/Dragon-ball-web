@@ -55,38 +55,29 @@ function createPlanetCard({name, isDestroyed, description, image}){
         </div>
     `
 }
+
 const characterSection = document.getElementById('characterSection');
-
-async function displayCharacters(){
-    const characterInfo = await fetchApiJson(requestCharactersUrl);
-
-    if(characterInfo && characterInfo.items){
-        const characterCard = characterInfo.items.map(createCharacterCard).join();
-        characterSection.innerHTML = characterCard;
-    }
-    else{
-        characterSection.innerHTML = `<p> Json characters couldn't load </p>`;
-    }
-}
-
 const planetSection = document.getElementById('planetSection');
 
-async function displayPlanets(){
-    const planetInfo = await fetchApiJson(requestPlanetsUrl);
-
-    if(planetInfo && planetInfo.items){
-        const planetCard = planetInfo.items.map(createPlanetCard).join();
-        planetSection.innerHTML = planetCard;
+async function displayJson(jsonData, section, dataCard){
+    
+    if(jsonData && jsonData.items){
+        const card = jsonData.items.map(dataCard).join();
+        section.innerHTML = card;
     }
     else{
-        planetSection.innerHTML = `<p> Json planets couldn't load </p>`;
+        section.innerHTML = `<p> Json planets couldn't load </p>`;
     }
 }
+async function display(){
 
-if(planetSection){
-    displayPlanets();
+    if(planetSection){
+        const planetData = await fetchApiJson(requestPlanetsUrl);
+        displayJson(planetData, planetSection, createPlanetCard);
+    }
+    if(characterSection){
+        const characterData = await fetchApiJson(requestCharactersUrl);
+        displayJson(characterData, characterSection, createCharacterCard);
+    }
 }
-if(characterSection){
-    displayCharacters();
-}
-
+display();
