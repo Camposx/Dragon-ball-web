@@ -25,6 +25,7 @@ main{
     min-height: 120dvh;
     width: 100%;
     display: flex;
+    padding: 30px;
 }
 
 .principalContainer{
