@@ -1,3 +1,5 @@
+@import url("./variables.css");
+
 .characterSection{
     display: flex;
     justify-content: space-around;
@@ -5,17 +7,23 @@
     
 }
 .characterSection img{
-    height: 200px;
-    transform: scale(1.2);
+    height: 400px;
     transition: 0.5s;
     object-fit: cover;
     overflow: visible;
+    z-index: 1;
 }
 .characterSection img:hover{
-    transform: scale(1.35);
+    transform: scale(1.2);
 }
 
 .characterSection .charCard{
     background-color: transparent;
-    backdrop-filter: blur(10px) ;
+    backdrop-filter: blur(20px);
+    color: var(--wait);
+    text-align: end;
+}
+.characterSection .card-body{
+    background-color: rgba(177, 70, 8, 0.4);
+    height: 100%;
 }

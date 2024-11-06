@@ -17,19 +17,19 @@ async function fetchApiJson(requestUrl){
 
 function createCharacterCard({name, ki, maxKi, race, gender, description, image, affiliation}){
     return `
-        <div class="card mb-3 charCard" style="max-width: 540px;">
+        <div class="card m-3 charCard" style="width: 400px; height: 400px">
             <div class="row g-0">
-                <div class="col-md-4 d-flex align-items-center justify-content-center">
-                <img src="${image}" class="img-fluid rounded-start" alt="${name}">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="${image}" class="img-fluid rounded-start" alt="${name}">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="card-body">
                         <h5 class="card-title">${name}</h5>
                         <h6 class="card-title">Ki: ${ki}</h6>
                         <h6 class="card-title">MaxKi: ${maxKi}</h6>
-                        <p class="card-text"><small class="text-body-secondary">${gender}</small></p>
-                        <p class="card-text"><small class="text-body-secondary">${race}</small></p>
-                        <p class="card-text"><small class="text-body-secondary">${affiliation}</small></p>
+                        <p class="card-text"><small >${gender}</small></p>
+                        <p class="card-text"><small >${race}</small></p>
+                        <p class="card-text"><small >${affiliation}</small></p>
                     </div>
                 </div>
             </div>
@@ -44,12 +44,11 @@ function createPlanetCard({name, isDestroyed, description, image}){
     if(!isDestroyed){
         isDestroyed = "Not Destroyed";
     }
-
     return `
 
-        <div class="card planCard m-3 text-bg-dark" style="max-width: 540px;">
+        <div class="card planCard m-3 text-bg-dark d-flex" style="max-width: 610px;">
             <img src="${image}" class="card-img" alt="${name}">
-            <div class="card-img-overlay cardText">
+            <div class="cardText position-absolute bottom-0 px-4 pt-2">
                 <h5 class="card-title">${name}</h5>
                 <p class="card-text">${description}</p>
                 <p class="card-text"><small>${isDestroyed}</small></p>
