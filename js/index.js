@@ -1,5 +1,5 @@
-const requestPlanetsUrl = "https://dragonball-api.com/api/planets";
-const requestCharactersUrl = "https://dragonball-api.com/api/characters";
+const requestPlanetsUrl = "https://dragonball-api.com/api/planets?limit=0";
+const requestCharactersUrl = "https://dragonball-api.com/api/characters?limit=58";
 
 async function fetchApiJson(requestUrl){
     try{
@@ -19,7 +19,7 @@ function createCharacterCard({name, ki, maxKi, race, gender, description, image,
     return `
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
-                <div class="col-md-4">
+                <div class="col-md-4 d-flex align-items-center">
                 <img src="${image}" class="img-fluid rounded-start" alt="${name}">
                 </div>
                 <div class="col-md-8">
@@ -62,11 +62,11 @@ const planetSection = document.getElementById('planetSection');
 async function displayJson(jsonData, section, dataCard){
     
     if(jsonData && jsonData.items){
-        const card = jsonData.items.map(dataCard).join();
+        const card = jsonData.items.map(dataCard).join("");
         section.innerHTML = card;
     }
     else{
-        section.innerHTML = `<p> Json planets couldn't load </p>`;
+        section.innerHTML = `<p> Json data couldn't load </p>`;
     }
 }
 async function display(){
