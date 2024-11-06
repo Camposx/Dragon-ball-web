@@ -38,19 +38,21 @@ function createCharacterCard({name, ki, maxKi, race, gender, description, image,
 }
 
 function createPlanetCard({name, isDestroyed, description, image}){
+    if(isDestroyed){
+        isDestroyed = "Destroyed";
+    }
+    if(!isDestroyed){
+        isDestroyed = "Not Destroyed";
+    }
+
     return `
-        <div class="card planCard mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                <img src="${image}" class="img-fluid rounded-start" alt="${name}">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${name}</h5>
-                        <h6 class="card-title">${isDestroyed}</h6>
-                        <p class="card-text">${description}</p>
-                    </div>
-                </div>
+
+        <div class="card planCard m-3 text-bg-dark" style="max-width: 540px;">
+            <img src="${image}" class="card-img" alt="${name}">
+            <div class="card-img-overlay cardText">
+                <h5 class="card-title">${name}</h5>
+                <p class="card-text">${description}</p>
+                <p class="card-text"><small>${isDestroyed}</small></p>
             </div>
         </div>
     `

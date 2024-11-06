@@ -2,9 +2,18 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
 }
 .planetSection .planCard{
     background-color: transparent;
     backdrop-filter: blur(10px) ;
+}
+
+.planetSection .cardText{
+    background-color: transparent;
+    
+}
+
+.planetSection img{
+    height: 300px;
+    object-fit: cover;
 }
