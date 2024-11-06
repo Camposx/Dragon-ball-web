@@ -39,7 +39,7 @@ function createCharacterCard({name, ki, maxKi, race, gender, description, image,
 
 function createPlanetCard({name, isDestroyed, description, image}){
     return `
-        <div class="card mb-3" style="max-width: 540px;">
+        <div class="card planCard mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                 <img src="${image}" class="img-fluid rounded-start" alt="${name}">
