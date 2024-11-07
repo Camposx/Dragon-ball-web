@@ -17,12 +17,12 @@ async function fetchApiJson(requestUrl){
 
 function createCharacterCard({name, ki, maxKi, race, gender, description, image, affiliation}){
     return `
-        <div class="card m-3 charCard" style="width: 400px; height: 400px">
+        <div class="card charCard" style="width: 400px; height: 400px">
             <div class="row g-0">
-                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="col-6 d-flex align-items-center justify-content-center">
                     <img src="${image}" class="img-fluid rounded-start" alt="${name}">
                 </div>
-                <div class="col-md-6">
+                <div class="col-6">
                     <div class="card-body">
                         <h5 class="card-title">${name}</h5>
                         <h6 class="card-title">Ki: ${ki}</h6>

@@ -11,7 +11,6 @@
 body{
     display: grid;
     grid-template-rows: auto 1fr auto;
-    
 }
 
 header{
@@ -28,7 +27,7 @@ footer{
 }
 
 main{
-    min-height: 120dvh;
+    min-height: 110dvh;
     width: 100%;
     display: flex;
     padding: 30px;
@@ -51,12 +50,14 @@ main{
     width: 300px;
     height: 600px;
     border: 1px solid black;
-    background-color: bisque;
+    /* background-color: bisque; */
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .linkCard:hover{
-    background-color: rgb(234, 207, 174);
+    background-color: rgba(234, 207, 174, 0.3);
 }
