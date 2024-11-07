@@ -25,8 +25,10 @@ function createCharacterCard({name, ki, maxKi, race, gender, description, image,
                 <div class="col-6">
                     <div class="card-body">
                         <h5 class="card-title">${name}</h5>
-                        <h6 class="card-title">Ki: ${ki}</h6>
-                        <h6 class="card-title">MaxKi: ${maxKi}</h6>
+                        <h6 class="card-title">Ki:</h6>
+                        <h6 class="card-title">${ki}</h6>
+                        <h6 class="card-title">MaxKi:</h6>
+                        <h6 class="card-title">${maxKi}</h6>
                         <p class="card-text"><small >${gender}</small></p>
                         <p class="card-text"><small >${race}</small></p>
                         <p class="card-text"><small >${affiliation}</small></p>
@@ -46,7 +48,7 @@ function createPlanetCard({name, isDestroyed, description, image}){
     }
     return `
 
-        <div class="card planCard m-3 text-bg-dark d-flex" style="max-width: 610px;">
+        <div class="card planCard m-3  d-flex" style="max-width: 610px;">
             <img src="${image}" class="card-img" alt="${name}">
             <div class="cardText position-absolute bottom-0 px-4 pt-2">
                 <h5 class="card-title">${name}</h5>

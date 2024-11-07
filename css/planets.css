@@ -6,7 +6,10 @@
     flex-wrap: wrap;
 }
 .planetSection .planCard{
-    background-color: aqua;
+    backdrop-filter: blur(15px);
+    background-color: transparent;
+    border: 30px solid rgba(1, 28, 82, 0.6);
+    color: white;
 }
 
 .planetSection .cardText{
