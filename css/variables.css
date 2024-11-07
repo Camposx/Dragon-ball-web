@@ -1,6 +1,6 @@
 @font-face {
     font-family: dragonBall;
-    src: url(/assets/saiyan_sans/Saiyan-Sans.ttf);
+    src: url(../assets/saiyan_sans/Saiyan-Sans.ttf);
 }
 :root{
     --primary: #092968;
