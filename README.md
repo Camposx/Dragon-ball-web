@@ -7,6 +7,8 @@ This is a dragon ball page that contains all the character and planets from DBZ.
 >[!NOTE]
 >Im using this project to improve my skills.
 
+![Captura DragonBall Web](https://github.com/user-attachments/assets/e8f9bd05-bccb-4b2c-a8ef-7e377e88cd66)
+
 ## Instalation.
 For local use you can clone the project and execute "index.html".
 
