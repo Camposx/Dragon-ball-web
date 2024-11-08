@@ -73,7 +73,6 @@ async function displayJson(jsonData, section, dataCard){
     }
 }
 async function display(){
-
     if(planetSection){
         const planetData = await fetchApiJson(requestPlanetsUrl);
         displayJson(planetData, planetSection, createPlanetCard);
